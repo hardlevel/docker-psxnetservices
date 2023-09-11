@@ -46,5 +46,7 @@ RUN curl -LJO https://github.com/PSRewired/RetroDNS/releases/download/0.0.1/Retr
 
 EXPOSE 38008 34522
 
-#CMD ["ps3netsrv++", "/var/www/ps3/"]
-CMD ["smbd", "--foreground", "--no-process-group"]
+COPY ["./scripts.sh", "/root/scripts.sh"]
+#RUN chmod
+#CMD ["/bin/sh","/root/scripts.sh"]
+CMD ["bash", "-c", "smbd --foreground --no-process-group & kaiengine & /var/www/ps3/ps3netsrv /var/www/ps3/share"]
