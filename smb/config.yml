@@ -1,0 +1,18 @@
+auth:
+  - user: root
+    group: root
+    uid: 0
+    gid: 0
+
+global:
+  - "force user = root"
+  - "force group = root"
+
+share:
+  - name: ps2
+    path: /var/www/ps2
+    browsable: yes
+    readonly: no
+    guestok: yes
+    veto: no
+    recycle: yes 
