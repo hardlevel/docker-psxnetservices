@@ -41,8 +41,8 @@ RUN echo "[ps2]" >> /etc/samba/smb.conf && \
     echo "   create mask = 0777" >> /etc/samba/smb.conf && \
     echo "   directory mask = 0777" >> /etc/samba/smb.conf
 
-RUN curl -LJO https://github.com/PSRewired/RetroDNS/releases/download/0.0.1/RetroDNS-0.0.1-linux-x64.tar.gz && \
-    tar -xzf RetroDNS-0.0.1-linux-x64.tar.gz
+RUN curl -LJO https://github.com/PSRewired/RetroDNS/releases/download/0.0.3/RetroDNS-0.0.3-linux-x64.tar.gz && \
+    tar -xzf RetroDNS-0.0.3-linux-x64.tar.gz
 
 EXPOSE 38008 34522
 
