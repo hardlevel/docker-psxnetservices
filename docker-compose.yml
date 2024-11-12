@@ -6,14 +6,14 @@ x-logging: &default-logging
   driver: json-file
 services:
   web:
-    container_name: psx-netservices
+    container_name: hardlevel-psx-netservices
     build: ./
     tty: true
     cap_add:
       - NET_ADMIN
     ports:
-      - "8000"
-      - "34522"
+      - "7000:8000"
+      - "34522:34522"
     volumes:
       - ./ps2:/var/www/ps2/
       - ./ps3:/var/www/ps3/share
